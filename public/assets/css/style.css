@@ -1,0 +1,359 @@
+/****** Propriétés Générales ******/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+.line {
+    display: block;
+    width: 80px;
+    border-top: 2px solid;
+    margin-top: 5px !important;
+    margin-bottom: 1rem !important;
+}
+/* Textes */
+h2 {
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.text-bold {
+    font-weight: 700;
+}
+/* Couleurs et couleurs de fond */
+.green {
+    color: #3D858E;
+}
+.bg-green {
+    background-color: #3D858E;
+}
+.line-green {
+    border-color: #3D858E;
+}
+.yellow {
+    color: #F6A844;
+}
+.bg-yellow {
+    background-color: #F6A844;
+}
+.line-yellow {
+    border-color: #F6A844;
+}
+.white {
+    color: #FFF;
+}
+.bg-white {
+    background-color: #FFF;
+}
+.line-white {
+    border-color: #FFF;
+}
+
+.text-center {
+    text-align: center;
+}
+.block-center {
+    margin: 0 auto;
+}
+
+/* Menu */
+ul.menu {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+ul.menu > li {
+    width: 200px;
+}
+/* Réseaux Sociaux */
+ul.social-network {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+ul.social-network > li {
+    width: 80px;
+    text-align: end;
+}
+/* Formulaire */
+label {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+input, textarea {
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+}
+/* Boutons */
+.btn {
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    cursor: pointer;
+}
+header, section, footer {
+    width: 100vw;
+}
+section, footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.header-main, .biography-main, .portrait-main, .landscape-main, .contact-main, .footer-main {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+/****** Propriétés Header ******/
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/landscapes/landscape1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+header .header-main {
+    height: 100%;
+}
+
+/* Barre de navigation */
+header .header-main nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1200px;
+    height: 60px;
+}
+header .header-main nav ul.menu {
+    height: 100%;
+}
+header .header-main nav ul.menu li {
+    text-align: end;
+}
+header .header-main nav a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+header .header-main .header-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+/* Titre du header */
+header .header-main .header-content .title {
+    max-width: 300px;
+}
+header .header-main .header-content .title h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+}
+header .header-main .header-content .title .line {
+    width: 200px;
+}
+header .header-main .header-content .baseline {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+header .header-main .header-content p {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+/* Pied du header */
+header .header-main .header-footer {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 0;
+}
+/****** Propriétés Biography ******/
+section .biography-main {
+    display: flex;
+}
+section .biography-main .biography-left {
+    width: 40%;
+}
+#biography .biography-main .biography-left {
+    text-align: center;
+}
+#biography .biography-main .biography-left img {
+    height: 500px;
+}
+section .biography-main .biography-right {
+    width: 60%;
+}
+
+/****** Propriétés Portraits ******/
+#portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#portrait .portrait-img {
+    margin-top: 3rem;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 250px);
+    grid-template-areas: "portrait8 portrait8 portrait8 portrait7 portrait7 portrait7 portrait7 portrait1 portrait1 portrait1 portrait1 portrait1"
+                        "portrait8 portrait8 portrait8 portrait6 portrait6 portrait6 portrait6 portrait6 portrait6 portrait5 portrait5 portrait5"
+                        "portrait9 portrait9 portrait9 portrait9 portrait3 portrait3 portrait3 portrait3 portrait3 portrait5 portrait5 portrait5"
+                        "portrait2 portrait2 portrait2 portrait2 portrait2 portrait2 portrait4 portrait4 portrait4 portrait4 portrait4 portrait4";
+}
+.portrait8 {
+    grid-area: portrait8;
+}
+.portrait7 {
+    grid-area: portrait7;
+}
+.portrait1 {
+    grid-area: portrait1;
+}
+.portrait6 {
+    grid-area: portrait6;
+}
+.portrait5 {
+    grid-area: portrait5;
+}
+.portrait9 {
+    grid-area: portrait9;
+}
+.portrait3 {
+    grid-area: portrait3;
+}
+.portrait2 {
+    grid-area: portrait2;
+}
+.portrait4 {
+    grid-area: portrait4;
+}
+
+/****** Propriétés Landscape ******/
+#landscape img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#landscape .landscape-img {
+    margin-top: 3rem;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 250px);
+    grid-template-areas: "landscape9 landscape9 landscape9 landscape9 landscape2 landscape2 landscape2 landscape2 landscape2 landscape8 landscape8 landscape8"
+                        "landscape6 landscape6 landscape6 landscape4 landscape4 landscape4 landscape4 landscape4 landscape4 landscape8 landscape8 landscape8"
+                        "landscape6 landscape6 landscape6 landscape3 landscape3 landscape3 landscape3 landscape3 landscape1 landscape1 landscape1 landscape1"
+                        "landscape5 landscape5 landscape5 landscape5 landscape5 landscape5 landscape7 landscape7 landscape7 landscape7 landscape7 landscape7";
+}
+.landscape9 {
+    grid-area: landscape9;
+}
+.landscape2 {
+    grid-area: landscape2;
+}
+.landscape8 {
+    grid-area: landscape8;
+}
+.landscape6 {
+    grid-area: landscape6;
+}
+.landscape4 {
+    grid-area: landscape4;
+}
+.landscape3 {
+    grid-area: landscape3;
+}
+.landscape1 {
+    grid-area: landscape1;
+}
+.landscape5 {
+    grid-area: landscape5;
+}
+.landscape7 {
+    grid-area: landscape7;
+}
+
+/****** Propriétés Contact ******/
+#contact .contact-main {
+    display: flex;
+}
+#contact .contact-main .contact-left {
+    width: 50%;
+    color: #000;
+    padding: 5rem;
+    border-radius: 15px 0 0 15px;
+}
+#contact .contact-main .contact-left > form {
+    display: flex;
+    flex-direction: column;
+}
+#contact .contact-main .contact-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/photographer2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 15px 15px 0;
+}
+#contact .contact-main .contact-right img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 3px solid #FFF;
+    margin-top: 2.5rem;
+}
+
+/****** Propriétés Footer ******/
+footer .footer-main {
+    display: flex;
+    margin-bottom: 4rem;
+}
+footer ul.menu {
+    justify-content: flex-start;
+}
+footer .footer-main ul.menu li {
+    text-align: start;
+}
+footer .footer-main ul.menu li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+}
+footer .footer-footer {
+    font-size: 0.7rem;
+}
